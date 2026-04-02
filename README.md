@@ -23,7 +23,7 @@ JSON (626 chars, ~215 tokens):
     "fullname": "Jane Doe",
     "birthDate": "1989-01-31T23:00:00.000Z",
     "password": {
-        "hash": "a/oX5r5pS5b3YF2z7L+yN1g2dJ7pZ7s2P4G8H8Q2a1A",
+        "hash": "aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A",
         "algorithm": "argon2id",
         "version": 19
     },
@@ -57,7 +57,7 @@ Full name: Jane Doe
 
 ## Password
 
-Hash: a/oX5r5pS5b3YF2z7L+yN1g2dJ7pZ7s2P4G8H8Q2a1A
+Hash: aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A
 Algorithm: argon2id
 Version: 19
 
@@ -87,7 +87,7 @@ Id: 10
 Username: janedoe
 Full name: Jane Doe
 Password:
-    Hash: a/oX5r5pS5b3YF2z7L+yN1g2dJ7pZ7s2P4G8H8Q2a1A
+    Hash: aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A
     Algorithm: argon2id
     Version: 19
 Addresses:
@@ -116,7 +116,7 @@ or
 - Username: janedoe
 - Full name: Jane Doe
 - Password:
-    - Hash: a/oX5r5pS5b3YF2z7L+yN1g2dJ7pZ7s2P4G8H8Q2a1A
+    - Hash: aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A
     - Algorithm: argon2id
     - Version: 19
 - Addresses:

@@ -337,6 +337,7 @@ Thematic breaks (---) may be used anywhere where a blank line could appear.
 
 
 
+
 ## Markdown Compatibility
 
 ### Markdown Backwards Compatibility
@@ -396,3 +397,53 @@ Official file extension for MOL files: `.mol`
 
 Official file extension for objects: `.mdo` or `.molo`
 Official file extension for configurations: `.mdc` or `.molc` (could be useful to easily spot config files, avoids things like tsconfig.json - would be typescript.molc)
+
+
+
+
+## Implementations
+
+- Language specific implementations of MOL should fully comply with the official specifications in all matters.
+- Every implementation should be efficient in memory and processing speed, as well as code complexity.
+- The codebase should be lean and clean, and easy to understand, maintain and verify.
+- Implementation distributables should be dependency free (so long it makes sense).
+
+### Key-Name Normalization
+
+MOL does not define key-name normalization as part of the core format.
+Transformations such as camelCase, PascalCase, snake_case, or kebab-case are implementation-specific.
+
+If an implementation exposes named normalization modes, the following terms should be used with these meanings:
+
+- `identity`
+  Preserve the key as written, without changing separators or letter casing.
+  Example: `Full name` -> `Full name`
+
+- `camelCase`
+  Split the key into words, remove separators, lowercase the first word, and capitalize subsequent words.
+  Example: `Full name` -> `fullName`
+
+- `PascalCase`
+  Split the key into words, remove separators, and capitalize each word.
+  Example: `Full name` -> `FullName`
+
+- `snake_case`
+  Split the key into words, lowercase them, and join them with underscore characters.
+  Example: `Full name` -> `full_name`
+
+- `kebab-case`
+  Split the key into words, lowercase them, and join them with hyphen characters.
+  Example: `Full name` -> `full-name`
+
+Implementations should document their exact handling of edge cases such as:
+
+- Acronyms and initialisms
+- Repeated separators
+- Leading digits
+- Non-ASCII letters
+- Punctuation other than space, underscore, or hyphen
+
+## Tests
+
+Each implementation must be able to pass all the tests provided by the mol-specs tests (in ./tests).
+See ./tests/README.md for more information on tests.
