@@ -1,5 +1,5 @@
 ```ts
-    let mdoContents = `
+    let molContents = `
 # Example Keyed
 
 - Id: 10
@@ -14,8 +14,8 @@
         - Enabled: true
         - Value: example`;
     
-    let mdo = MDOL.parse(mdoContents, MDOL.camelCase);
-    console.log(mdo.id); // outputs 10
-    console.log(mdo.hash); // outputs "9b87da04349185080af34e04895d4d66"
-    console.log(mdo.properties.length); // outputs { type: "number", enabled: false, value: -1 }
+    let mol = MDOL.parse(molContents, MDOL.camelCase);
+    console.log(mol.id); // outputs 10
+    console.log(mol.hash); // outputs "9b87da04349185080af34e04895d4d66"
+    console.log(mol.properties.length); // outputs { type: "number", enabled: false, value: -1 }
 ```

@@ -1,10 +1,10 @@
 # Root
-    ## Level 2
-        - L2 Property A: value
+    ## Level 1
+        - L1 Property A: value
 
                 // Nesting pasted from somewhere else and not reformatted
-                // It's a heading so this is a L2 sub-property
-                ## L2 Property B
+                // It's a heading so this is a L1 sub-property
+                ## L1 Property B
 
                 - Id: 10
                 - Hash: 9b87da04349185080af34e04895d4d66

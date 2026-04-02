@@ -359,6 +359,9 @@ Tabs are the preferred indentation style for emitted files, though parsers shoul
 
 ### File Endings
 
-Official file extension for objects: `.mdo`
+Official file extension for MOL files: `.mol`
 
-Official file extension for configurations: `.mdc`
+#### Alternate naming (TBD):
+
+Official file extension for objects: `.mdo` or `.molo`
+Official file extension for configurations: `.mdc` or `.molc` (could be useful to easily spot config files, avoids things like tsconfig.json - would be typescript.molc)
