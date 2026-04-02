@@ -2,12 +2,38 @@ STATUS: DRAFT / IN PROGRESS
 
 # Markdown Object Language (MOL) Specification
 
+
+
 ## Overview
 
 Markdown Object Language (MOL) is a nested object notation built on top of markdown-like text.
-It is intended for human-editable structured data such as records, schemas, and configuration files.
+It is intended for human-editable structured data such as records, schemas, configuration files, and other markdown-adjacent object documents.
 
 MOL is deliberately flexible. Multiple markdown-shaped forms can describe the same object tree.
+This flexibility is intended to make MOL practical for both humans and LLMs.
+
+
+
+
+## Intended Use and Limits
+
+MOL is a good fit when authors want to stay close to normal markdown while storing structured data.
+
+Common uses include:
+
+- Records
+- Schemas
+- Configuration files
+- LLM-facing structured documents
+
+MOL is intentionally text-first and loose. This has tradeoffs:
+
+- It is less suitable for deeply nested structures.
+- Primitive types are not fully defined by the markup itself.
+- Higher-level deserializers are expected to apply schema, typing, and native object/array mapping rules.
+
+
+
 
 ## Data Model
 
@@ -27,6 +53,9 @@ Examples:
 
 Parsers should preserve source order. Higher-level deserializers may choose how to map repeated keys to arrays or records.
 
+
+
+
 ## Structural Forms
 
 The following forms are structurally equivalent when they describe the same tree:
@@ -35,7 +64,6 @@ The following forms are structurally equivalent when they describe the same tree
 - Plain `Key: Value` entries
 - Plain `Key:` or `Key` object entries
 - Markdown list items using `-`, `*`, `+`, or `1.`
-- Dotted-path keys such as `Properties.Length.Type: number`
 
 ### Root Heading Level
 
@@ -113,7 +141,8 @@ Properties:
 
 Headings may also take a text body instead of child entries.
 
-Heading depth is determined by the number of `#` markers relative to the document's root heading level, not by indentation.
+Heading depth is determined solely by the number of ``#`` markers, normalized to the document's shallowest
+  structural heading level. Indentation does not affect heading depth.
 
 ### List Entry
 
@@ -132,23 +161,8 @@ All of the following list markers are valid:
 - `+`
 - `1.`, `2.`, etc.
 
-### Dotted Path Entry
-
-Dotted keys create nested objects inline:
-
-```md
-Properties.Length.Type: number
-```
-
-This is equivalent to:
-
-```md
-Properties:
-    Length:
-        Type: number
-```
-
-Each `.` introduces another nested key segment.
+List syntax alone does not imply array semantics.
+Array-like behavior comes from repeated sibling entries or from higher-level deserializer conventions.
 
 ## Nesting Rules
 
@@ -182,7 +196,10 @@ Indentation does not change heading depth. This allows heading blocks to be inde
 
 Heading-based and indentation-based forms may be mixed in the same document.
 
-For example, a heading may contain plain entries, list entries, dotted-path entries, or additional headings.
+For example, a heading may contain plain entries, list entries, or additional headings.
+
+
+
 
 ## Scalar Values
 
@@ -270,6 +287,9 @@ Name: literal text
 
 When a fenced code block is used as a text body, its contents are taken literally as the scalar value body until the closing fence.
 
+
+
+
 ## Arrays and Duplicate Keys
 
 Sibling keys are allowed to repeat.
@@ -295,6 +315,12 @@ Properties:
 
 Whether repeated keys are exposed as arrays, multisets, or ordered duplicate fields is an implementation choice above the syntax layer, but source order should be preserved.
 
+Sequence-style sections such as `Instructions` or `Constraints` may also be deserialized as native arrays when the target schema expects ordered items.
+That mapping is a deserializer convention above the MOL syntax layer.
+
+
+
+
 ## Comments and Whitespace
 
 Blank lines may be used freely to improve readability.
@@ -305,6 +331,11 @@ The following comment forms are extensions to markdown and are ignored by MOL pa
 - Block comments: `/* comment */`
 
 Comments may appear anywhere a blank line could appear.
+
+Thematic breaks (---) may be used anywhere where a blank line could appear.
+
+
+
 
 ## Markdown Compatibility
 
@@ -321,7 +352,6 @@ MOL intentionally reuses common markdown constructs:
 MOL extends markdown with:
 
 - Object semantics for headings, list items, and `Key: Value` lines
-- Dotted-path keys
 - `//` line comments
 - `/* ... */` block comments
 
@@ -335,10 +365,11 @@ A conforming parser should:
 - Recognize plain and list-based key/value entries
 - Recognize key-only entries
 - Recognize text-body scalar values, including multiline text
-- Recognize dotted-path expansion
 - Preserve entry order
 - Allow duplicate sibling keys
 - Support indentation-based nesting for non-heading entries
+
+
 
 
 ## Conventions
@@ -361,7 +392,7 @@ Tabs are the preferred indentation style for emitted files, though parsers shoul
 
 Official file extension for MOL files: `.mol`
 
-#### Alternate naming (TBD):
+#### Alternate Naming (TBD):
 
 Official file extension for objects: `.mdo` or `.molo`
 Official file extension for configurations: `.mdc` or `.molc` (could be useful to easily spot config files, avoids things like tsconfig.json - would be typescript.molc)
