@@ -1,0 +1,19 @@
+# Root
+    ## Level 2
+        - L2 Property A: value
+
+                // Nesting pasted from somewhere else and not reformatted
+                // It's a heading so this is a L2 sub-property
+                ## L2 Property B
+
+                - Id: 10
+                - Hash: 9b87da04349185080af34e04895d4d66
+                - Properties:
+                    - Length:
+                        - Type: number
+                        - Enabled: false
+                        - Value: -1
+                    - Description
+                        - Type: string
+                        - Enabled: true
+                        - Value: example

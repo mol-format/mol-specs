@@ -1,0 +1,6 @@
+# Root
+- L1 Property A: value
+                // Nesting pasted from somewhere else and not reformatted
+                // The tabbing is greater, so these are sub-properties
+                - L2 Property A: 10
+                - L2 Property B: 9b87da04349185080af34e04895d4d66
