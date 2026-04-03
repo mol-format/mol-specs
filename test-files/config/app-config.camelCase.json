@@ -1,0 +1,33 @@
+{
+  "name": "mol-service",
+  "environment": "production",
+  "port": 8080,
+  "debug": false,
+  "database": {
+    "host": "db.internal",
+    "port": 5432,
+    "user": "mol",
+    "password": "secret",
+    "poolSize": 20
+  },
+  "features": {
+    "caching": true,
+    "telemetry": false,
+    "strictMode": true
+  },
+  "routes": {
+    "route": [
+      {
+        "method": "GET",
+        "path": "/health",
+        "auth": false
+      },
+      {
+        "method": "POST",
+        "path": "/api/upload",
+        "auth": true,
+        "timeoutMs": 15000
+      }
+    ]
+  }
+}

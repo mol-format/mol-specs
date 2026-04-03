@@ -1,0 +1,4 @@
+Name: Demo
+Enabled: true
+Retries: 3
+Mode: safe

@@ -1,0 +1,43 @@
+# User 10
+
+Id: 10
+Username: janedoe
+Full name: Jane Doe
+Created at: 2026-04-02T10:15:00Z
+Active: true
+
+## Password
+
+Hash: aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A
+Algorithm: argon2id
+Version: 19
+
+## Addresses
+
+### Business
+
+Street: 123 Main St.
+City: Zurich
+Postal Code: 8001
+Country: CH
+
+### Home
+
+Street: 123 Suburbia
+City: Zurich
+Postal Code: 8045
+Country: CH
+
+## Preferences
+Theme: light
+Language: en
+
+## Login history
+
+### Entry
+At: 2026-04-01T08:30:00Z
+Ip: 203.0.113.10
+
+### Entry
+At: 2026-04-02T09:45:00Z
+Ip: 203.0.113.11

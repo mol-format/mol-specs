@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "retries": 5,
+  "mode": "strict",
+  "paths": {
+    "input": "./fixtures",
+    "output": "./dist"
+  }
+}

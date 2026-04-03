@@ -1,0 +1,29 @@
+# App Config
+Name: mol-service
+Environment: production
+Port: 8080
+Debug: false
+
+## Database
+Host: db.internal
+Port: 5432
+User: mol
+Password: secret
+Pool size: 20
+
+## Features
+Caching: true
+Telemetry: false
+Strict mode: true
+
+## Routes
+### Route
+Method: GET
+Path: /health
+Auth: false
+
+### Route
+Method: POST
+Path: /api/upload
+Auth: true
+Timeout ms: 15000

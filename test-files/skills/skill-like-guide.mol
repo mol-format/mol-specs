@@ -1,0 +1,26 @@
+# Skill Parser Review
+Name: parser-review
+Summary:
+    Review a parser change and produce concrete findings.
+
+## Triggers
+- Trigger:
+    Phrase: review this parser
+    Intent: code-review
+- Trigger:
+    Phrase: inspect mol fixtures
+    Intent: test-review
+
+## Workflow
+Step:
+    Name: Gather context
+    Output: Understand the changed files and tests
+Step:
+    Name: Find risks
+    Output: Focus on regressions and missing coverage
+
+## Constraints
+
+Prefer findings over summaries.
+Keep comments concise.
+Use file references when possible.

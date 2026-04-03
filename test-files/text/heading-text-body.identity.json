@@ -1,0 +1,5 @@
+{
+  "Version": "1.2.0",
+  "Summary": "This release tightens parsing behavior.\nIt also broadens fixture coverage.\n",
+  "Migration": "No breaking changes for basic readers.\n"
+}

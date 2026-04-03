@@ -1,0 +1,28 @@
+{
+  "Name": "triage",
+  "Inputs": {
+    "Input": [
+      {
+        "Name": "diff",
+        "Required": true
+      },
+      {
+        "Name": "test results",
+        "Required": false
+      }
+    ]
+  },
+  "Constraints": {
+    "Constraint": [
+      {
+        "Text": "Prioritize regressions."
+      },
+      {
+        "Text": "Mention missing tests."
+      },
+      {
+        "Text": "Keep the summary short."
+      }
+    ]
+  }
+}

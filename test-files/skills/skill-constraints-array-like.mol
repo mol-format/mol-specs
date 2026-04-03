@@ -1,0 +1,18 @@
+# Skill Triage
+Name: triage
+
+## Inputs
+Input:
+    Name: diff
+    Required: true
+Input:
+    Name: test results
+    Required: false
+
+## Constraints
+Constraint:
+    Text: Prioritize regressions.
+Constraint:
+    Text: Mention missing tests.
+Constraint:
+    Text: Keep the summary short.

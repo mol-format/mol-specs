@@ -1,0 +1,16 @@
+{
+  "Name": "release",
+  "Enabled": true,
+  "Steps": {
+    "Step": [
+      {
+        "Name": "compile",
+        "Status": "pending"
+      },
+      {
+        "Name": "package",
+        "Status": "ready"
+      }
+    ]
+  }
+}

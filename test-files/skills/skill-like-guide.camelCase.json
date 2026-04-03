@@ -1,0 +1,29 @@
+{
+  "name": "parser-review",
+  "summary": "Review a parser change and produce concrete findings.\n",
+  "triggers": {
+    "trigger": [
+      {
+        "phrase": "review this parser",
+        "intent": "code-review"
+      },
+      {
+        "phrase": "inspect mol fixtures",
+        "intent": "test-review"
+      }
+    ]
+  },
+  "workflow": {
+    "step": [
+      {
+        "name": "Gather context",
+        "output": "Understand the changed files and tests"
+      },
+      {
+        "name": "Find risks",
+        "output": "Focus on regressions and missing coverage"
+      }
+    ]
+  },
+  "constraints": "Prefer findings over summaries.\nKeep comments concise.\nUse file references when possible.\n"
+}

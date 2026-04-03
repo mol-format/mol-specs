@@ -1,0 +1,42 @@
+{
+  "id": 10,
+  "username": "janedoe",
+  "fullName": "Jane Doe",
+  "createdAt": "2026-04-02T10:15:00Z",
+  "active": true,
+  "password": {
+    "hash": "aoX5r5pS5b3YF2z7LyN1g2dJ7pZ7s2P4G8H8Q2a1A",
+    "algorithm": "argon2id",
+    "version": 19
+  },
+  "addresses": {
+    "business": {
+      "street": "123 Main St.",
+      "city": "Zurich",
+      "postalCode": 8001,
+      "country": "CH"
+    },
+    "home": {
+      "street": "123 Suburbia",
+      "city": "Zurich",
+      "postalCode": 8045,
+      "country": "CH"
+    }
+  },
+  "preferences": {
+    "theme": "light",
+    "language": "en"
+  },
+  "loginHistory": {
+    "entry": [
+      {
+        "at": "2026-04-01T08:30:00Z",
+        "ip": "203.0.113.10"
+      },
+      {
+        "at": "2026-04-02T09:45:00Z",
+        "ip": "203.0.113.11"
+      }
+    ]
+  }
+}

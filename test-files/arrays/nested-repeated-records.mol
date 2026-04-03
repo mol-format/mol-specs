@@ -1,0 +1,11 @@
+# Deployment
+
+## Environment
+Name: dev
+Url: https://dev.example.test
+Enabled: true
+
+## Environment
+Name: prod
+Url: https://prod.example.test
+Enabled: false

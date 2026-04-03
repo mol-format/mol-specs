@@ -1,0 +1,21 @@
+{
+  "level1": {
+    "l1PropertyA": "value"
+  },
+  "l1PropertyB": {
+    "id": 10,
+    "hash": "9b87da04349185080af34e04895d4d66",
+    "properties": {
+      "length": {
+        "type": "number",
+        "enabled": false,
+        "value": -1
+      },
+      "description": {
+        "type": "string",
+        "enabled": true,
+        "value": "example"
+      }
+    }
+  }
+}

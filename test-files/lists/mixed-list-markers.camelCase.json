@@ -1,0 +1,15 @@
+{
+  "name": "Example",
+  "enabled": false,
+  "retries": 2,
+  "endpoint": [
+    {
+      "host": "localhost",
+      "port": 8080
+    },
+    {
+      "host": "localhost",
+      "port": 8081
+    }
+  ]
+}

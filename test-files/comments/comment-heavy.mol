@@ -1,0 +1,12 @@
+/* top comment */
+# Config
+// this section toggles parsing
+Enabled: true
+Retries: 5
+/* remove old flag */
+Mode: strict
+
+## Paths
+// path list
+Input: ./fixtures
+Output: ./dist

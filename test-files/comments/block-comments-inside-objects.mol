@@ -1,0 +1,14 @@
+# Build
+Name: release
+/* temporary note
+still inside comment */
+Enabled: true
+
+## Steps
+Step:
+    Name: compile
+    Status: pending
+/* another block comment */
+Step:
+    Name: package
+    Status: ready

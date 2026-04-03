@@ -1,0 +1,4 @@
+{
+  "script": "# literal heading text\nName: literal text\n- literal list text\n",
+  "mode": "safe\n"
+}

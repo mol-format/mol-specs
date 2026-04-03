@@ -1,0 +1,4 @@
+{
+  "script": "#!/usr/bin/env bash\necho hello",
+  "enabled": true
+}

@@ -1,0 +1,24 @@
+{
+  "Item": [
+    {
+      "Name": "Hammer",
+      "Price": 12.5,
+      "Tags": {
+        "Tag": [
+          "tool",
+          "metal"
+        ]
+      }
+    },
+    {
+      "Name": "Nails",
+      "Price": 3,
+      "Tags": {
+        "Tag": [
+          "hardware",
+          "bulk"
+        ]
+      }
+    }
+  ]
+}

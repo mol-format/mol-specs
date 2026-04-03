@@ -1,0 +1,24 @@
+# Catalog
+Generated at: 2026-04-02T18:00:00Z
+
+## Service
+Name: auth
+Owner: identity
+Tier: critical
+### Endpoint
+Method: POST
+Path: /login
+### Endpoint
+Method: POST
+Path: /refresh
+
+## Service
+Name: billing
+Owner: finance
+Tier: high
+### Endpoint
+Method: GET
+Path: /invoices
+### Endpoint
+Method: POST
+Path: /charges

@@ -1,0 +1,12 @@
+{
+  "Plugin": [
+    {
+      "Name": "cache",
+      "Enabled": true
+    },
+    {
+      "Name": "auth",
+      "Enabled": false
+    }
+  ]
+}

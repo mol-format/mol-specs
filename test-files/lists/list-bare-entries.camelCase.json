@@ -1,0 +1,11 @@
+{
+  "build": {
+    "status": "done"
+  },
+  "test": {
+    "status": "pending"
+  },
+  "release": {
+    "status": "blocked"
+  }
+}

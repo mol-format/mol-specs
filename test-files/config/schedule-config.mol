@@ -1,0 +1,14 @@
+# Schedule
+Name: deploy-window
+Start Date: 2026-04-10
+Start Time: 2026-04-10T22:00:00Z
+End Time: 2026-04-11T01:00:00Z
+Timezone: Europe/Zurich
+
+## Notifications
+Reminder:
+    At: 2026-04-10T21:30:00Z
+    Channel: email
+Reminder:
+    At: 2026-04-10T21:45:00Z
+    Channel: slack

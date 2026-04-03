@@ -1,0 +1,22 @@
+# Feature Flags
+Service: parser-api
+
+## Flags
+Flag:
+    Name: strict-mode
+    Default: true
+    Description:
+        Reject malformed nested structures.
+Flag:
+    Name: preview-ui
+    Default: false
+    Description:
+        Expose the preview panel to beta users.
+
+## Rollout
+Region eu-central:
+    Enabled: true
+    Percentage: 100
+Region us-east:
+    Enabled: false
+    Percentage: 0

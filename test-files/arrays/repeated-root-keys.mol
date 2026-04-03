@@ -1,0 +1,6 @@
+Plugin:
+    Name: cache
+    Enabled: true
+Plugin:
+    Name: auth
+    Enabled: false

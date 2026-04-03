@@ -1,0 +1,6 @@
+{
+  "name": "Demo",
+  "enabled": true,
+  "retries": 3,
+  "mode": "safe"
+}

@@ -1,0 +1,27 @@
+{
+  "service": "parser-api",
+  "flags": {
+    "flag": [
+      {
+        "name": "strict-mode",
+        "default": true,
+        "description": "Reject malformed nested structures."
+      },
+      {
+        "name": "preview-ui",
+        "default": false,
+        "description": "Expose the preview panel to beta users.\n"
+      }
+    ]
+  },
+  "rollout": {
+    "regionEuCentral": {
+      "enabled": true,
+      "percentage": 100
+    },
+    "regionUsEast": {
+      "enabled": false,
+      "percentage": 0
+    }
+  }
+}

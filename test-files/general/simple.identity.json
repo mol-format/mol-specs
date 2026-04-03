@@ -1,0 +1,16 @@
+{
+  "Id": 10,
+  "Hash": "9b87da04349185080af34e04895d4d66",
+  "Properties": {
+    "Length": {
+      "Type": "number",
+      "Enabled": false,
+      "Value": -1
+    },
+    "Description": {
+      "Type": "string",
+      "Enabled": true,
+      "Value": "example"
+    }
+  }
+}

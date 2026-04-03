@@ -1,0 +1,15 @@
+# Inventory
+
+## Item
+Name: Hammer
+Price: 12.5
+Tags:
+    Tag: tool
+    Tag: metal
+
+## Item
+Name: Nails
+Price: 3
+Tags:
+    Tag: hardware
+    Tag: bulk

@@ -1,0 +1,10 @@
+# Mixed Lists
+- Name: Example
+* Enabled: false
++ Retries: 2
+1. Endpoint:
+    - Host: localhost
+    - Port: 8080
+2. Endpoint:
+    - Host: localhost
+    - Port: 8081

@@ -1,0 +1,14 @@
+{
+  "environment": [
+    {
+      "name": "dev",
+      "url": "https://dev.example.test",
+      "enabled": true
+    },
+    {
+      "name": "prod",
+      "url": "https://prod.example.test",
+      "enabled": false
+    }
+  ]
+}

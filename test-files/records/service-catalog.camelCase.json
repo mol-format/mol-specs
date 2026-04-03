@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-04-02T18:00:00Z",
+  "service": [
+    {
+      "name": "auth",
+      "owner": "identity",
+      "tier": "critical",
+      "endpoint": [
+        {
+          "method": "POST",
+          "path": "/login"
+        },
+        {
+          "method": "POST",
+          "path": "/refresh"
+        }
+      ]
+    },
+    {
+      "name": "billing",
+      "owner": "finance",
+      "tier": "high",
+      "endpoint": [
+        {
+          "method": "GET",
+          "path": "/invoices"
+        },
+        {
+          "method": "POST",
+          "path": "/charges"
+        }
+      ]
+    }
+  ]
+}
