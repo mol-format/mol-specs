@@ -205,7 +205,9 @@ For example, a heading may contain plain entries, list entries, or additional he
 
 MOL itself is text-first and does not impose a strict primitive type system.
 
-Values such as `10`, `false`, `number`, and `example` are written as text. Implementations may coerce them to numbers, booleans, enums, or other domain-specific types.
+At the core syntax layer, scalar values are preserved as strings.
+
+Values such as `10`, `false`, `number`, and `example` are written as text. Higher-level deserializers may coerce unquoted scalar strings to numbers, booleans, enums, or other domain-specific types.
 
 Scalar values may be expressed either inline or as a text body.
 
@@ -222,6 +224,58 @@ Text-body scalar example:
 
 10
 ```
+
+### Inline Quoted Values
+
+An inline scalar whose entire value is wrapped in matching single quotes or matching double quotes is an explicit string literal.
+
+Supported forms:
+
+```md
+Year: "2025"
+Flag: 'false'
+```
+
+Quoted inline scalar values:
+
+- Must occupy the full inline value after `Key:`
+- Are preserved as strings by the parser
+- Must not be auto-coerced by the parser to numbers, booleans, or other native types
+
+Only full-value quoting has special meaning. Partial quoting inside an otherwise unquoted inline value is not defined as a distinct scalar form by the core syntax.
+
+Basic escapes are supported inside quoted inline values:
+
+- `\\`
+- `\"`
+- `\'`
+- `\n`
+- `\r`
+- `\t`
+
+Example:
+
+```md
+Message: "line 1\nline 2"
+Path: 'C:\\temp\\cache'
+Quote: "\"hello\""
+```
+
+### Date and Datetime Conventions
+
+ISO 8601 date and datetime values are an officially supported scalar convention.
+
+Examples:
+
+```md
+Date: 2026-04-02
+Timestamp: 2026-04-02T18:30:45Z
+Timestamp With Offset: 2026-04-02T20:30:45+02:00
+```
+
+ISO 8601 date and datetime values are preserved as strings by the parser and must not be auto-coerced to native date objects at the syntax layer.
+
+Higher-level deserializers may interpret these string values according to schema or application rules.
 
 ### Text-Body Values
 
@@ -365,7 +419,10 @@ A conforming parser should:
 - Recognize heading scopes
 - Recognize plain and list-based key/value entries
 - Recognize key-only entries
+- Recognize full-value single-quoted and double-quoted inline string literals
+- Decode the basic quoted inline escapes `\\`, `\"`, `\'`, `\n`, `\r`, and `\t`
 - Recognize text-body scalar values, including multiline text
+- Preserve scalar values as strings at the syntax layer, including ISO 8601 date and datetime forms
 - Preserve entry order
 - Allow duplicate sibling keys
 - Support indentation-based nesting for non-heading entries
