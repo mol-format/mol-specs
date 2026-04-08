@@ -8,8 +8,12 @@ Status: DRAFT / IN PROGRESS
 
 In the new world of LLMs and agents, markdown has become a goto format for describing things. Sometimes it's nice to stay in the format for storing structured data, configurations and more.
 
-MOL is also a bit easier and friendlier to edit than other markdowns such as JSON. And there is more than one way to express the same object. This makes MOL looser and less prone to parsing errors.
+MOL is also a bit easier and friendlier to edit than other formats such as JSON. And there is more than one way to express the same object. This makes MOL looser and less prone to parsing errors, especially when coming from a LLM model.
 
+Quick Installs:
+- JS/TS: ```npm install mol-format```
+- Rust: ```cargo install serde_mol```
+- .net: ```dotnet add package Mol.Format```
 
 
 ## Example
@@ -154,36 +158,36 @@ or
 
 ## Implementations
 
+### Typescript
+
+Official Package: ```npm install mol-format```
+Official Repo: https://github.com/mol-format/mol-ts
+
+### JavaScript
+
+Official Package: ```npm install mol-format```
+Official Repo: https://github.com/mol-format/mol-ts
+
+### Rust
+
+Official Package: ```cargo install serde_mol```
+Official Repo: https://github.com/mol-format/mol-rs
+
+### .NET
+
+Official Package: ```dotnet add package Mol.Format```
+Official Repo: https://github.com/mol-format/mol-net
+
 ### C++
 
 Official Package: TODO
 Official Repo: https://github.com/mol-format/mol-cpp
 
-### JavaScript
-
-Official Package: TODO
-Official Repo: https://github.com/mol-format/mol-js
-
-### .NET
-
-Official Package: TODO
-Official Repo: https://github.com/mol-format/mol-net
-
-### Typescript
-
-Official Package: TODO
-Official Repo: https://github.com/mol-format/mol-ts
-
-### Rust
-
-Official Package: TODO
-Official Repo: https://github.com/mol-format/mol-rs
-
 ### Other
 
 Enter this prompt into your favorite coding tool: 
 
-```Implement a markdown object file reader/writer as specified by https://github.com/mol-format/mol-specs/SPECS.md```
+```Implement a markdown object file reader/writer for Mol Format as specified by https://github.com/mol-format/mol-specs/SPECS.md```
 
 
 
