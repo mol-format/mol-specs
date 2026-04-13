@@ -1,10 +1,10 @@
-# Markdown Object Language (.mol)
+# Markdown Object Language (MOL)
 
 **A simple and easy to use object notation language based on markdown.** 
 
 Easy to use for humans and machines (LLMs).
 
-Status: DRAFT / IN PROGRESS
+Status: ``DRAFT / IN PROGRESS``
 
 In the new world of LLMs and agents, markdown has become a goto format for describing things. Sometimes it's nice to stay in the format for storing structured data, configurations and more.
 
