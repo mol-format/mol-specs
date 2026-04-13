@@ -161,33 +161,33 @@ or
 ### Typescript
 
 - Official Package: ```npm install mol-format```
-- Official Repo: https://github.com/mol-format/mol-ts
+- Official Repo: [https://github.com/mol-format/mol-ts](https://github.com/mol-format/mol-ts)
 
 ### JavaScript
 
 - Official Package: ```npm install mol-format```
-- Official Repo: https://github.com/mol-format/mol-ts
+- Official Repo: [https://github.com/mol-format/mol-ts](https://github.com/mol-format/mol-ts)
 
 ### Rust
 
 - Official Package: ```cargo install serde_mol```
-- Official Repo: https://github.com/mol-format/mol-rs
+- Official Repo: [https://github.com/mol-format/mol-rs](https://github.com/mol-format/mol-rs)
 
 ### .NET
 
 - Official Package: ```dotnet add package Mol.Format```
-- Official Repo: https://github.com/mol-format/mol-net
+- Official Repo: [https://github.com/mol-format/mol-net](https://github.com/mol-format/mol-net)
 
 ### C++
 
 - Official Package: TODO
-- Official Repo: https://github.com/mol-format/mol-cpp
+- Official Repo: [https://github.com/mol-format/mol-cpp](https://github.com/mol-format/mol-cpp)
 
 ### Other
 
 Enter this prompt into your favorite coding tool: 
 
-```Implement a markdown object file reader/writer for Mol Format as specified by https://github.com/mol-format/mol-specs/SPECS.md```
+```Implement a markdown object file reader/writer for MOL Format as specified by https://github.com/mol-format/mol-specs/blob/main/SPECS.md```
 
 
 
@@ -279,7 +279,7 @@ Value: example
 
 ## Specs
 
-[SPECS.md](SPECS.md)
+[SPECS.md](https://github.com/mol-format/mol-specs/blob/main/SPECS.md)
 
 
 
