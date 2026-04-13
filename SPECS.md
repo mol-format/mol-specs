@@ -501,5 +501,5 @@ Implementations should document their exact handling of edge cases such as:
 
 ## Tests
 
-Each implementation must be able to pass all the tests provided by the mol-specs tests (in ./tests).
-See ./tests/README.md for more information on tests.
+Each implementation must be able to pass all the tests provided by the mol-specs tests (in ./test-files).
+See ./test-files/README.md for more information on tests.
