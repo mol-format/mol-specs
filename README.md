@@ -160,28 +160,28 @@ or
 
 ### Typescript
 
-Official Package: ```npm install mol-format```
-Official Repo: https://github.com/mol-format/mol-ts
+- Official Package: ```npm install mol-format```
+- Official Repo: https://github.com/mol-format/mol-ts
 
 ### JavaScript
 
-Official Package: ```npm install mol-format```
-Official Repo: https://github.com/mol-format/mol-ts
+- Official Package: ```npm install mol-format```
+- Official Repo: https://github.com/mol-format/mol-ts
 
 ### Rust
 
-Official Package: ```cargo install serde_mol```
-Official Repo: https://github.com/mol-format/mol-rs
+- Official Package: ```cargo install serde_mol```
+- Official Repo: https://github.com/mol-format/mol-rs
 
 ### .NET
 
-Official Package: ```dotnet add package Mol.Format```
-Official Repo: https://github.com/mol-format/mol-net
+- Official Package: ```dotnet add package Mol.Format```
+- Official Repo: https://github.com/mol-format/mol-net
 
 ### C++
 
-Official Package: TODO
-Official Repo: https://github.com/mol-format/mol-cpp
+- Official Package: TODO
+- Official Repo: https://github.com/mol-format/mol-cpp
 
 ### Other
 
